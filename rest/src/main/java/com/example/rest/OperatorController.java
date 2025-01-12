@@ -32,8 +32,8 @@ public class OperatorController {
     @GetMapping("api/{operation}")
     public ResponseEntity<Map<String, Object>> handleOperation(
             @PathVariable String operation,
-            @RequestParam("a") double a,
-            @RequestParam("b") double b) {
+            @RequestParam(value = "a", required = false) Double a,  // Handle missing parameter by making it optional
+            @RequestParam(value = "b", required = false) Double b) {
 
         // Validate the operation and input
         ResponseEntity<Map<String, Object>> validationError = validateInputs(operation, a, b);
@@ -78,7 +78,11 @@ public class OperatorController {
         return ResponseEntity.badRequest().body(errorBody);
     }
 
-    private ResponseEntity<Map<String, Object>> validateInputs(String operation, double a, double b) {
+    private ResponseEntity<Map<String, Object>> validateInputs(String operation, Double a, Double b) {
+        if (a == null || b == null) {
+            logger.warn("Missing inputs for the '{}'", operation);
+            return createErrorResponse("Missing parameters", "Parameters 'a' and 'b' are required.");
+        }
         if (!VALID_OPERATIONS.contains(operation)) {
             logger.warn("Invalid operation '{}'", operation);
             return createErrorResponse("Operation not valid", "Valid operations are: " + VALID_OPERATIONS);
