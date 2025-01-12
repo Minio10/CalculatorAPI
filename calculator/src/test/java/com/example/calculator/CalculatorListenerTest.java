@@ -58,6 +58,36 @@ public class CalculatorListenerTest {
     }
 
     @Test
+    public void testPerformOperation_multiplication() {
+        // Given
+        String message = "requestId_multiplication_5.0_3.0";
+        when(calculatorService.multiply(5.0, 3.0)).thenReturn((double) 15.0);
+
+        // When
+        calculatorListener.performOperation(message);
+
+        // Then
+        ArgumentCaptor<String> captor = ArgumentCaptor.forClass(String.class);
+        verify(kafkaTemplate).send(eq("result-topic"), captor.capture());
+        assertEquals("requestId_15.0", captor.getValue());
+    }
+
+    @Test
+    public void testPerformOperation_division() {
+        // Given
+        String message = "requestId_division_5.0_1.0";
+        when(calculatorService.divide(5.0, 1.0)).thenReturn((double) 5.0);
+
+        // When
+        calculatorListener.performOperation(message);
+
+        // Then
+        ArgumentCaptor<String> captor = ArgumentCaptor.forClass(String.class);
+        verify(kafkaTemplate).send(eq("result-topic"), captor.capture());
+        assertEquals("requestId_5.0", captor.getValue());
+    }
+
+    @Test
     public void testPerformOperation_invalidMessageFormat() {
         // Given
         String message = "invalid_message";
