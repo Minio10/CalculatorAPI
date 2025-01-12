@@ -1,0 +1,556 @@
+2025-01-12 18:52:36 - Starting CalculatorApplicationTests using Java 17.0.13 with PID 196723 (started by herminio in /home/herminio/IdeaProjects/CalculatorAPI/calculator)
+2025-01-12 18:52:36 - Starting CalculatorApplicationTests using Java 17.0.13 with PID 196723 (started by herminio in /home/herminio/IdeaProjects/CalculatorAPI/calculator)
+2025-01-12 18:52:36 - Running with Spring Boot v3.4.1, Spring v6.2.1
+2025-01-12 18:52:36 - Running with Spring Boot v3.4.1, Spring v6.2.1
+2025-01-12 18:52:36 - No active profile set, falling back to 1 default profile: "default"
+2025-01-12 18:52:36 - No active profile set, falling back to 1 default profile: "default"
+2025-01-12 18:52:37 - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-calculator-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = calculator
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-01-12 18:52:37 - initializing Kafka metrics collector
+2025-01-12 18:52:37 - Kafka version: 3.8.1
+2025-01-12 18:52:37 - Kafka commitId: 70d6ff42debf7e17
+2025-01-12 18:52:37 - Kafka startTimeMs: 1736707957276
+2025-01-12 18:52:37 - [Consumer clientId=consumer-calculator-1, groupId=calculator] Subscribed to topic(s): calculator-topic
+2025-01-12 18:52:37 - Started CalculatorApplicationTests in 1.283 seconds (process running for 1.854)
+2025-01-12 18:52:37 - Started CalculatorApplicationTests in 1.283 seconds (process running for 1.854)
+2025-01-12 18:52:37 - [Consumer clientId=consumer-calculator-1, groupId=calculator] Node -1 disconnected.
+2025-01-12 18:52:37 - [Consumer clientId=consumer-calculator-1, groupId=calculator] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-01-12 18:52:37 - [Consumer clientId=consumer-calculator-1, groupId=calculator] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-01-12 18:52:37 - [Consumer clientId=consumer-calculator-1, groupId=calculator] Node -1 disconnected.
+2025-01-12 18:52:37 - [Consumer clientId=consumer-calculator-1, groupId=calculator] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-01-12 18:52:37 - [Consumer clientId=consumer-calculator-1, groupId=calculator] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-01-12 18:52:37 - [Consumer clientId=consumer-calculator-1, groupId=calculator] Node -1 disconnected.
+2025-01-12 18:52:37 - [Consumer clientId=consumer-calculator-1, groupId=calculator] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-01-12 18:52:37 - [Consumer clientId=consumer-calculator-1, groupId=calculator] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-01-12 18:52:37 - [Consumer clientId=consumer-calculator-1, groupId=calculator] Node -1 disconnected.
+2025-01-12 18:52:37 - [Consumer clientId=consumer-calculator-1, groupId=calculator] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-01-12 18:52:37 - [Consumer clientId=consumer-calculator-1, groupId=calculator] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-01-12 18:52:38 - Invalid message format: invalid_message
+2025-01-12 18:52:38 - Invalid message format: invalid_message
+2025-01-12 18:52:38 - Invalid operation: invalid
+2025-01-12 18:52:38 - Invalid operation: invalid
+2025-01-12 18:52:38 - [Consumer clientId=consumer-calculator-1, groupId=calculator] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-01-12 18:52:38 - [Consumer clientId=consumer-calculator-1, groupId=calculator] Request joining group due to: consumer pro-actively leaving the group
+2025-01-12 18:52:38 - [Consumer clientId=consumer-calculator-1, groupId=calculator] Unsubscribed all topics or patterns and assigned partitions
+2025-01-12 18:52:38 - [Consumer clientId=consumer-calculator-1, groupId=calculator] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-01-12 18:52:38 - [Consumer clientId=consumer-calculator-1, groupId=calculator] Request joining group due to: consumer pro-actively leaving the group
+2025-01-12 18:52:38 - Metrics scheduler closed
+2025-01-12 18:52:38 - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-01-12 18:52:38 - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-01-12 18:52:38 - Metrics reporters closed
+2025-01-12 18:52:38 - App info kafka.consumer for consumer-calculator-1 unregistered
+2025-01-12 18:52:38 - calculator: Consumer stopped
+2025-01-12 18:59:59 - INFO - Starting CalculatorApplicationTests using Java 17.0.13 with PID 200232 (started by herminio in /home/herminio/IdeaProjects/CalculatorAPI/calculator)
+2025-01-12 18:59:59 - INFO - Starting CalculatorApplicationTests using Java 17.0.13 with PID 200232 (started by herminio in /home/herminio/IdeaProjects/CalculatorAPI/calculator)
+2025-01-12 18:59:59 - DEBUG - Running with Spring Boot v3.4.1, Spring v6.2.1
+2025-01-12 18:59:59 - DEBUG - Running with Spring Boot v3.4.1, Spring v6.2.1
+2025-01-12 18:59:59 - INFO - No active profile set, falling back to 1 default profile: "default"
+2025-01-12 18:59:59 - INFO - No active profile set, falling back to 1 default profile: "default"
+2025-01-12 19:00:00 - INFO - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-calculator-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = calculator
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-01-12 19:00:00 - INFO - initializing Kafka metrics collector
+2025-01-12 19:00:00 - INFO - Kafka version: 3.8.1
+2025-01-12 19:00:00 - INFO - Kafka commitId: 70d6ff42debf7e17
+2025-01-12 19:00:00 - INFO - Kafka startTimeMs: 1736708400525
+2025-01-12 19:00:00 - INFO - [Consumer clientId=consumer-calculator-1, groupId=calculator] Subscribed to topic(s): calculator-topic
+2025-01-12 19:00:00 - INFO - Started CalculatorApplicationTests in 1.113 seconds (process running for 1.699)
+2025-01-12 19:00:00 - INFO - Started CalculatorApplicationTests in 1.113 seconds (process running for 1.699)
+2025-01-12 19:00:00 - INFO - [Consumer clientId=consumer-calculator-1, groupId=calculator] Node -1 disconnected.
+2025-01-12 19:00:00 - WARN - [Consumer clientId=consumer-calculator-1, groupId=calculator] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-01-12 19:00:00 - WARN - [Consumer clientId=consumer-calculator-1, groupId=calculator] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-01-12 19:00:00 - INFO - [Consumer clientId=consumer-calculator-1, groupId=calculator] Node -1 disconnected.
+2025-01-12 19:00:00 - WARN - [Consumer clientId=consumer-calculator-1, groupId=calculator] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-01-12 19:00:00 - WARN - [Consumer clientId=consumer-calculator-1, groupId=calculator] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-01-12 19:00:00 - INFO - [Consumer clientId=consumer-calculator-1, groupId=calculator] Node -1 disconnected.
+2025-01-12 19:00:00 - WARN - [Consumer clientId=consumer-calculator-1, groupId=calculator] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-01-12 19:00:00 - WARN - [Consumer clientId=consumer-calculator-1, groupId=calculator] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-01-12 19:00:01 - INFO - [Consumer clientId=consumer-calculator-1, groupId=calculator] Node -1 disconnected.
+2025-01-12 19:00:01 - WARN - [Consumer clientId=consumer-calculator-1, groupId=calculator] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-01-12 19:00:01 - WARN - [Consumer clientId=consumer-calculator-1, groupId=calculator] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-01-12 19:00:01 - ERROR - Invalid message format: invalid_message
+2025-01-12 19:00:01 - ERROR - Invalid message format: invalid_message
+2025-01-12 19:00:01 - ERROR - Invalid operation: invalid
+2025-01-12 19:00:01 - ERROR - Invalid operation: invalid
+2025-01-12 19:00:01 - INFO - [Consumer clientId=consumer-calculator-1, groupId=calculator] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-01-12 19:00:01 - INFO - [Consumer clientId=consumer-calculator-1, groupId=calculator] Request joining group due to: consumer pro-actively leaving the group
+2025-01-12 19:00:01 - INFO - [Consumer clientId=consumer-calculator-1, groupId=calculator] Unsubscribed all topics or patterns and assigned partitions
+2025-01-12 19:00:01 - INFO - [Consumer clientId=consumer-calculator-1, groupId=calculator] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-01-12 19:00:01 - INFO - [Consumer clientId=consumer-calculator-1, groupId=calculator] Request joining group due to: consumer pro-actively leaving the group
+2025-01-12 19:00:01 - INFO - Metrics scheduler closed
+2025-01-12 19:00:01 - INFO - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-01-12 19:00:01 - INFO - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-01-12 19:00:01 - INFO - Metrics reporters closed
+2025-01-12 19:00:01 - INFO - App info kafka.consumer for consumer-calculator-1 unregistered
+2025-01-12 19:00:01 - INFO - calculator: Consumer stopped
+2025-01-12 19:07:23 - INFO - Starting CalculatorApplicationTests using Java 17.0.13 with PID 202280 (started by herminio in /home/herminio/IdeaProjects/CalculatorAPI/calculator)
+2025-01-12 19:07:23 - INFO - Starting CalculatorApplicationTests using Java 17.0.13 with PID 202280 (started by herminio in /home/herminio/IdeaProjects/CalculatorAPI/calculator)
+2025-01-12 19:07:23 - DEBUG - Running with Spring Boot v3.4.1, Spring v6.2.1
+2025-01-12 19:07:23 - DEBUG - Running with Spring Boot v3.4.1, Spring v6.2.1
+2025-01-12 19:07:23 - INFO - No active profile set, falling back to 1 default profile: "default"
+2025-01-12 19:07:23 - INFO - No active profile set, falling back to 1 default profile: "default"
+2025-01-12 19:07:24 - INFO - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-calculator-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = calculator
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-01-12 19:07:24 - INFO - initializing Kafka metrics collector
+2025-01-12 19:07:24 - INFO - Kafka version: 3.8.1
+2025-01-12 19:07:24 - INFO - Kafka commitId: 70d6ff42debf7e17
+2025-01-12 19:07:24 - INFO - Kafka startTimeMs: 1736708844620
+2025-01-12 19:07:24 - INFO - [Consumer clientId=consumer-calculator-1, groupId=calculator] Subscribed to topic(s): calculator-topic
+2025-01-12 19:07:24 - INFO - Started CalculatorApplicationTests in 1.177 seconds (process running for 1.761)
+2025-01-12 19:07:24 - INFO - Started CalculatorApplicationTests in 1.177 seconds (process running for 1.761)
+2025-01-12 19:07:24 - INFO - [Consumer clientId=consumer-calculator-1, groupId=calculator] Node -1 disconnected.
+2025-01-12 19:07:24 - WARN - [Consumer clientId=consumer-calculator-1, groupId=calculator] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-01-12 19:07:24 - WARN - [Consumer clientId=consumer-calculator-1, groupId=calculator] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-01-12 19:07:24 - INFO - [Consumer clientId=consumer-calculator-1, groupId=calculator] Node -1 disconnected.
+2025-01-12 19:07:24 - WARN - [Consumer clientId=consumer-calculator-1, groupId=calculator] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-01-12 19:07:24 - WARN - [Consumer clientId=consumer-calculator-1, groupId=calculator] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-01-12 19:07:25 - INFO - [Consumer clientId=consumer-calculator-1, groupId=calculator] Node -1 disconnected.
+2025-01-12 19:07:25 - WARN - [Consumer clientId=consumer-calculator-1, groupId=calculator] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-01-12 19:07:25 - WARN - [Consumer clientId=consumer-calculator-1, groupId=calculator] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-01-12 19:07:25 - INFO - [Consumer clientId=consumer-calculator-1, groupId=calculator] Node -1 disconnected.
+2025-01-12 19:07:25 - WARN - [Consumer clientId=consumer-calculator-1, groupId=calculator] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-01-12 19:07:25 - WARN - [Consumer clientId=consumer-calculator-1, groupId=calculator] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-01-12 19:07:25 - ERROR - Invalid message format: invalid_message
+2025-01-12 19:07:25 - ERROR - Invalid message format: invalid_message
+2025-01-12 19:07:25 - ERROR - Invalid operation: invalid
+2025-01-12 19:07:25 - ERROR - Invalid operation: invalid
+2025-01-12 19:07:25 - INFO - [Consumer clientId=consumer-calculator-1, groupId=calculator] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-01-12 19:07:25 - INFO - [Consumer clientId=consumer-calculator-1, groupId=calculator] Request joining group due to: consumer pro-actively leaving the group
+2025-01-12 19:07:25 - INFO - [Consumer clientId=consumer-calculator-1, groupId=calculator] Unsubscribed all topics or patterns and assigned partitions
+2025-01-12 19:07:25 - INFO - [Consumer clientId=consumer-calculator-1, groupId=calculator] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-01-12 19:07:25 - INFO - [Consumer clientId=consumer-calculator-1, groupId=calculator] Request joining group due to: consumer pro-actively leaving the group
+2025-01-12 19:07:25 - INFO - Metrics scheduler closed
+2025-01-12 19:07:25 - INFO - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-01-12 19:07:25 - INFO - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-01-12 19:07:25 - INFO - Metrics reporters closed
+2025-01-12 19:07:25 - INFO - App info kafka.consumer for consumer-calculator-1 unregistered
+2025-01-12 19:07:25 - INFO - calculator: Consumer stopped
+2025-01-12 19:12:45 - INFO - Starting CalculatorApplicationTests using Java 17.0.13 with PID 205632 (started by herminio in /home/herminio/IdeaProjects/CalculatorAPI/calculator)
+2025-01-12 19:12:45 - INFO - Starting CalculatorApplicationTests using Java 17.0.13 with PID 205632 (started by herminio in /home/herminio/IdeaProjects/CalculatorAPI/calculator)
+2025-01-12 19:12:45 - DEBUG - Running with Spring Boot v3.4.1, Spring v6.2.1
+2025-01-12 19:12:45 - DEBUG - Running with Spring Boot v3.4.1, Spring v6.2.1
+2025-01-12 19:12:45 - INFO - No active profile set, falling back to 1 default profile: "default"
+2025-01-12 19:12:45 - INFO - No active profile set, falling back to 1 default profile: "default"
+2025-01-12 19:12:46 - INFO - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-calculator-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = calculator
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-01-12 19:12:46 - INFO - initializing Kafka metrics collector
+2025-01-12 19:12:46 - INFO - Kafka version: 3.8.1
+2025-01-12 19:12:46 - INFO - Kafka commitId: 70d6ff42debf7e17
+2025-01-12 19:12:46 - INFO - Kafka startTimeMs: 1736709166445
+2025-01-12 19:12:46 - INFO - [Consumer clientId=consumer-calculator-1, groupId=calculator] Subscribed to topic(s): calculator-topic
+2025-01-12 19:12:46 - INFO - Started CalculatorApplicationTests in 1.2 seconds (process running for 1.801)
+2025-01-12 19:12:46 - INFO - Started CalculatorApplicationTests in 1.2 seconds (process running for 1.801)
+2025-01-12 19:12:46 - INFO - [Consumer clientId=consumer-calculator-1, groupId=calculator] Node -1 disconnected.
+2025-01-12 19:12:46 - WARN - [Consumer clientId=consumer-calculator-1, groupId=calculator] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-01-12 19:12:46 - WARN - [Consumer clientId=consumer-calculator-1, groupId=calculator] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-01-12 19:12:46 - INFO - [Consumer clientId=consumer-calculator-1, groupId=calculator] Node -1 disconnected.
+2025-01-12 19:12:46 - WARN - [Consumer clientId=consumer-calculator-1, groupId=calculator] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-01-12 19:12:46 - WARN - [Consumer clientId=consumer-calculator-1, groupId=calculator] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-01-12 19:12:46 - INFO - [Consumer clientId=consumer-calculator-1, groupId=calculator] Node -1 disconnected.
+2025-01-12 19:12:46 - WARN - [Consumer clientId=consumer-calculator-1, groupId=calculator] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-01-12 19:12:46 - WARN - [Consumer clientId=consumer-calculator-1, groupId=calculator] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-01-12 19:12:47 - INFO - [Consumer clientId=consumer-calculator-1, groupId=calculator] Node -1 disconnected.
+2025-01-12 19:12:47 - WARN - [Consumer clientId=consumer-calculator-1, groupId=calculator] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-01-12 19:12:47 - WARN - [Consumer clientId=consumer-calculator-1, groupId=calculator] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-01-12 19:12:47 - ERROR - Invalid message format: invalid_message
+2025-01-12 19:12:47 - ERROR - Invalid message format: invalid_message
+2025-01-12 19:12:47 - ERROR - Invalid operation: invalid
+2025-01-12 19:12:47 - ERROR - Invalid operation: invalid
+2025-01-12 19:12:47 - INFO - [Consumer clientId=consumer-calculator-1, groupId=calculator] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-01-12 19:12:47 - INFO - [Consumer clientId=consumer-calculator-1, groupId=calculator] Request joining group due to: consumer pro-actively leaving the group
+2025-01-12 19:12:47 - INFO - [Consumer clientId=consumer-calculator-1, groupId=calculator] Unsubscribed all topics or patterns and assigned partitions
+2025-01-12 19:12:47 - INFO - [Consumer clientId=consumer-calculator-1, groupId=calculator] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-01-12 19:12:47 - INFO - [Consumer clientId=consumer-calculator-1, groupId=calculator] Request joining group due to: consumer pro-actively leaving the group
+2025-01-12 19:12:47 - INFO - Metrics scheduler closed
+2025-01-12 19:12:47 - INFO - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-01-12 19:12:47 - INFO - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-01-12 19:12:47 - INFO - Metrics reporters closed
+2025-01-12 19:12:47 - INFO - App info kafka.consumer for consumer-calculator-1 unregistered
+2025-01-12 19:12:47 - INFO - calculator: Consumer stopped
