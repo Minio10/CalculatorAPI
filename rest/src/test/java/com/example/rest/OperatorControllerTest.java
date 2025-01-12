@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
@@ -99,5 +100,15 @@ public class OperatorControllerTest {
                 .andExpect(status().isBadRequest())
                 .andExpect(jsonPath("$.error").value("Calculation failed"))
                 .andExpect(jsonPath("$.message").value("An error occurred while performing 'sum' operation. Please check the inputs and operation."));
+    }
+
+    @Test
+    public void testHandleOperation_missingParameters() throws Exception {
+        // Simulate a request with missing 'a' and 'b' parameters
+        mockMvc.perform(get("/api/sum")
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isBadRequest()) // Expecting a Bad Request status
+                .andExpect(jsonPath("$.error").value("Missing parameters"))
+                .andExpect(jsonPath("$.message").value("Parameters 'a' and 'b' are required."));
     }
 }
