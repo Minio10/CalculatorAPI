@@ -90,7 +90,7 @@ public class OperatorController {
 
         if ("division".equals(operation) && b == 0) {
             logger.warn("Invalid input b: {} for division", b);
-            return createErrorResponse("Invalid input for division", "Value of 'b' cannot be zero.");
+            return createErrorResponse("Division by zero is not allowed", "Value of 'b' cannot be zero.");
         }
 
         return null;

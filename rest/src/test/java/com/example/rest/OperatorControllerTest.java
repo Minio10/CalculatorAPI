@@ -78,7 +78,7 @@ public class OperatorControllerTest {
                         .param("a", String.valueOf(a))
                         .param("b", String.valueOf(b)))
                 .andExpect(status().isBadRequest())
-                .andExpect(jsonPath("$.error").value("Invalid input for division"))
+                .andExpect(jsonPath("$.error").value("Division by zero is not allowed"))
                 .andExpect(jsonPath("$.message").value("Value of 'b' cannot be zero."));
     }
 

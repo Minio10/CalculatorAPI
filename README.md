@@ -1,155 +1,212 @@
+# Calculator RESTful API
 
-# Spring Boot Project with Kafka Integration
+## Table of Contents
+- [Description](#description)
+- [Requirements](#requirements)
+- [Build Instructions](#build-instructions)
+- [Run Instructions](#run-instructions)
+    - [Prerequisites](#prerequisites)
+    - [Steps](#steps)
+- [API Examples](#api-examples)
+- [Error Handling](#error-handling)
+- [Kafka Integration](#kafka-integration)
+- [Docker Configuration](#docker-configuration)
+- [Logs](#logs)
+- [Unit Tests](#unit-tests)
 
-This project contains two Gradle modules: `rest` and `calculator`. It uses Kafka for messaging between the two modules, and Docker Compose is used to initiate Kafka and Zookeeper. This guide will walk you through how to build, run the application, and run unit tests.
+---
 
-## Project Structure
+## Description
+This project provides a RESTful API that performs basic calculator functionalities including addition, subtraction, multiplication, and division. The API supports two operands (`a` and `b`) and allows arbitrary precision signed decimal numbers.
 
-The project is structured as follows:
+The project is implemented in Java using Spring Boot as the framework and Gradle for managing dependencies and building both modules.
 
-```
-spring-boot-kafka-project/
-├── build.gradle
-├── settings.gradle
-├── rest/
-│   ├── build.gradle
-│   ├── src/main/java/com/example/rest/OperatorController.java
-│   ├── src/main/java/com/example/rest/OperatorService.java
-│   └── src/test/java/com/example/rest/OperatorControllerTest.java
-└── calculator/
-    ├── build.gradle
-    ├── src/main/java/com/example/calculator/CalculatorListener.java
-    ├── src/main/java/com/example/calculator/CalculatorService.java
-    └── src/test/java/com/example/calculator/CalculatorListenerTest.java
-```
+---
 
-### Modules:
-- **rest**: Exposes a REST API to handle mathematical operations.
-- **calculator**: Listens to Kafka messages and performs the operations.
+## Requirements
 
-## Prerequisites
+This project implements the following summarized requirements:
 
-Before running the project, ensure that you have the following installed:
-- [Java 17 or later](https://adoptopenjdk.net/)
-- [Gradle](https://gradle.org/install/)
-- [Docker](https://www.docker.com/get-started) (for running Kafka and Zookeeper)
+- **Operations**: Provides endpoints for addition, subtraction, multiplication, and division.
+- **Operands**: Supports two signed decimal operands with arbitrary precision.
+- **Framework**: Built using Java, Spring Boot, and Gradle.
+- **Modules**: Organized into two modules:
+    - `rest`: Handles API requests and responses.
+    - `calculator`: Implements the core calculation logic.
+- **Communication**: Utilizes Apache Kafka for inter-module communication.
+- **Configuration**: Managed through `application.properties` with no XML except for potential logging.
+- **Containerization**: Includes Dockerfiles and a Docker Compose setup.
+- **Testing**: Includes unit tests to ensure correctness and reliability.
+- **Logging**: Supports SLF4J with Logback, including unique request identifiers and MDC propagation.
 
-## Step 1: Clone the Repository
+---
 
-Clone this repository to your local machine:
+## Build Instructions
+1. **Clone the Repository**:
+   ```bash
+   git clone <repository_url>
+   cd <project_directory>
+   ```
 
+2. **Build the Project**:
+    - Using Gradle:
+      ```bash
+      ./gradlew build
+      ```
+    - Using Maven:
+      ```bash
+      mvn clean install
+      ```
+
+3. **Run Unit Tests**:
+    - Using Gradle:
+      ```bash
+      ./gradlew test
+      ```
+    - Using Maven:
+      ```bash
+      mvn test
+      ```
+
+---
+
+## Run Instructions
+
+### Prerequisites
+- **Docker** and **Docker Compose** must be installed on your system.
+
+### Steps
+1. **Build Docker Images**:
+   ```bash
+   docker-compose build
+   ```
+
+2. **Run the Application**:
+   ```bash
+   docker-compose up
+   ```
+
+3. **Access the REST API**:
+    - Base URL: `http://localhost:8080`
+    - Available Endpoints:
+        - `GET /sum?a=<operand_a>&b=<operand_b>` - Perform addition.
+        - `GET /subtraction?a=<operand_a>&b=<operand_b>` - Perform subtraction.
+        - `GET /multiplication?a=<operand_a>&b=<operand_b>` - Perform multiplication.
+        - `GET /division?a=<operand_a>&b=<operand_b>` - Perform division.
+
+4. **Kafka Setup**: Kafka is pre-configured via `docker-compose.yml`. Ensure Kafka starts correctly with the application.
+
+---
+
+## API Examples
+### Sum
 ```bash
-git clone https://github.com/your-repository/spring-boot-kafka-project.git
-cd spring-boot-kafka-project
-```
-
-## Step 2: Build the Project
-
-To build the entire project, run the following command in the root of the project:
-
-```bash
-./gradlew build
-```
-
-This will build both the `rest` and `calculator` modules.
-
-## Step 3: Docker Compose - Kafka and Zookeeper
-
-We are using Docker Compose to set up Kafka and Zookeeper. To start them, run the following command from the root directory of the project:
-
-```bash
-docker-compose up -d
-```
-
-This will:
-- Start Zookeeper on port `2181`
-- Start Kafka on port `9092`
-
-To verify the services are running, you can check the status of the containers:
-
-```bash
-docker ps
-```
-
-## Step 4: Run the Spring Boot Application
-
-After Kafka and Zookeeper are up, you can run the application. From the root of the project, execute:
-
-```bash
-./gradlew bootRun
-```
-
-This will start the Spring Boot application with both modules (`rest` and `calculator`). The `rest` module will expose the API at `http://localhost:8080/api/{operation}`, where `{operation}` can be one of the operations (`sum`, `subtraction`, `multiplication`, `division`).
-
-## Step 5: Test the API
-
-You can test the `rest` module's API using `curl`, Postman, or any HTTP client.
-
-### Example Request:
-To perform a sum operation with parameters `a=5` and `b=3`:
-
-```bash
-curl -X GET "http://localhost:8080/api/sum?a=5&b=3"
-```
-
-### Expected Response:
-```json
+GET /sum?a=5.2&b=3.8
+Response:
 {
-  "result": "8",
-  "X-Request-ID": "generated-request-id"
+  "result": 9.0
 }
 ```
 
-## Step 6: Run Unit Tests
-
-### Running Unit Tests with Gradle
-
-You can run the unit tests for the `rest` and `calculator` modules using Gradle. From the root directory of the project, execute:
-
+### Subtraction
 ```bash
-./gradlew test
+GET /subtraction?a=10.5&b=4.5
+Response:
+{
+  "result": 6.0
+}
 ```
 
-This will run all unit tests for both modules (`rest` and `calculator`). The test results will be displayed in the terminal.
-
-### Running Unit Tests for Specific Modules
-
-If you want to run the tests for a specific module (e.g., `rest`), navigate to the module directory and run:
-
+### Multiplication
 ```bash
-cd rest
-../gradlew test
+GET /multiplication?a=7&b=3
+Response:
+{
+  "result": 21
+}
 ```
 
-For the `calculator` module:
-
+### Division
 ```bash
-cd calculator
-../gradlew test
+GET /division?a=20&b=4
+Response:
+{
+  "result": 5.0
+}
 ```
 
-## Step 7: Stopping the Services
+---
 
-Once you're done with testing and development, you can stop the Docker containers by running:
+## Error Handling
+- **Invalid Input**:
+  ```bash
+  GET /divide?a=5&b=0
+  Response:
+  {
+    "error": "Division by zero is not allowed."
+  }
+  ```
+    - Status Code: `400 Bad Request`
 
+- **Missing Parameters**:
+  ```bash
+  GET /sum?a=10
+  Response:
+  {
+    "error": "Missing parameters"
+  }
+  ```
+    - Status Code: `400 Bad Request`
+
+---
+
+## Kafka Integration
+- **Purpose**: Kafka handles communication between the `rest` and `calculator` modules.
+- **Topics**:
+    - `calculator-topic`: Sends calculation requests.
+    - `result-topic`: Receives calculation results.
+- **Message Format**:
+    - Request Example:
+      ```json
+      {
+        "request_id": "123e4567-e89b-12d3-a456-426614174000",
+        "operation": "sum",
+        "a": "10.5",
+        "b": "4.5"
+      }
+      ```
+    - Response Example:
+      ```json
+      {
+        "result": "15.0",
+        "request_id": "123e4567-e89b-12d3-a456-426614174000"
+      }
+      ```
+- **Error Handling**:
+    - If a module fails to process a message, the error is logged, and retries are attempted based on Kafka's configuration.
+
+---
+
+## Docker Configuration
+- **Dockerfile**: Configures the individual modules (`rest` and `calculator`).
+- **Docker Compose**: Manages the multi-container setup, including Kafka.
+
+---
+
+## Logs
+- Log files are stored in `logs/` directory of each module.
+- Logs include input/output events and errors with unique request identifiers for easy tracing.
+
+---
+
+## Unit Tests
+- Unit tests ensure:
+    - Correct calculation logic.
+    - Proper inter-module communication via Kafka.
+    - Correct API responses to the client.
+
+Run tests with:
 ```bash
-docker-compose down
+./gradlew test  # or mvn test
 ```
 
-This will stop and remove the Kafka and Zookeeper containers.
-
-## Troubleshooting
-
-- **Kafka/Zookeeper issues**: If the containers are not starting properly, check the logs using `docker logs <container-id>` for more details.
-- **Missing dependencies**: Ensure that you have all the necessary dependencies defined in the `build.gradle` files, and try running `./gradlew clean build` to clear any stale files.
-
-## Conclusion
-
-You have now set up a Spring Boot project with two modules (`rest` and `calculator`), integrated Kafka for communication, and used Docker Compose to start the necessary Kafka and Zookeeper services. You can build and run the application, perform API operations, and run unit tests with Gradle.
-
-Feel free to extend the functionality and modify the application as needed!
-
-## References
-- [Spring Boot Documentation](https://spring.io/projects/spring-boot)
-- [Kafka Documentation](https://kafka.apache.org/documentation/)
-- [Docker Compose Documentation](https://docs.docker.com/compose/)
