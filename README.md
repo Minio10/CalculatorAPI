@@ -63,11 +63,6 @@ This project implements the following summarized requirements:
       ```bash
       ./gradlew test
       ```
-    - Using Maven:
-      ```bash
-      mvn test
-      ```
-
 ---
 
 ## Run Instructions
@@ -207,6 +202,6 @@ Response:
 
 Run tests with:
 ```bash
-./gradlew test  # or mvn test
+./gradlew test
 ```
 
