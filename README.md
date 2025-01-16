@@ -195,8 +195,16 @@ Response:
     - Proper inter-module communication via Kafka.
     - Correct API responses to the client.
 
-Run tests with:
+Run tests for each module with:
 ```bash
-./gradlew test
+./gradlew :rest:test
 ```
+```bash
+./gradlew :calculator:test
+```
+Test reports are available inside each module on:
+```
+rest/build/reports/tests/test/index.html
+calculator/build/reports/tests/test/index.html
+``
 
