@@ -79,10 +79,10 @@ This project implements the following summarized requirements:
 3. **Access the REST API**:
     - Base URL: `http://localhost:8080`
     - Available Endpoints:
-        - `GET /sum?a=<operand_a>&b=<operand_b>` - Perform addition.
-        - `GET /subtraction?a=<operand_a>&b=<operand_b>` - Perform subtraction.
-        - `GET /multiplication?a=<operand_a>&b=<operand_b>` - Perform multiplication.
-        - `GET /division?a=<operand_a>&b=<operand_b>` - Perform division.
+        - `GET /api/sum?a=<operand_a>&b=<operand_b>` - Perform addition.
+        - `GET /api/subtraction?a=<operand_a>&b=<operand_b>` - Perform subtraction.
+        - `GET /api/multiplication?a=<operand_a>&b=<operand_b>` - Perform multiplication.
+        - `GET /api/division?a=<operand_a>&b=<operand_b>` - Perform division.
 
 4. **Kafka Setup**: Kafka is pre-configured via `docker-compose.yml`. Ensure Kafka starts correctly with the application.
 
@@ -91,7 +91,7 @@ This project implements the following summarized requirements:
 ## API Examples
 ### Sum
 ```bash
-GET /sum?a=5.2&b=3.8
+GET /api/sum?a=5.2&b=3.8
 Response:
 {
   "result": 9.0
@@ -100,7 +100,7 @@ Response:
 
 ### Subtraction
 ```bash
-GET /subtraction?a=10.5&b=4.5
+GET /api/subtraction?a=10.5&b=4.5
 Response:
 {
   "result": 6.0
@@ -109,7 +109,7 @@ Response:
 
 ### Multiplication
 ```bash
-GET /multiplication?a=7&b=3
+GET /api/multiplication?a=7&b=3
 Response:
 {
   "result": 21
@@ -118,7 +118,7 @@ Response:
 
 ### Division
 ```bash
-GET /division?a=20&b=4
+GET /api/division?a=20&b=4
 Response:
 {
   "result": 5.0
@@ -130,7 +130,7 @@ Response:
 ## Error Handling
 - **Invalid Input**:
   ```bash
-  GET /division?a=5&b=0
+  GET /api/division?a=5&b=0
   Response:
   {
     "error": "Division by zero is not allowed."
@@ -140,7 +140,7 @@ Response:
 
 - **Missing Parameters**:
   ```bash
-  GET /sum?a=10
+  GET /api/sum?a=10
   Response:
   {
     "error": "Missing parameters"
