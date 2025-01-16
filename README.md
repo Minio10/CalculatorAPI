@@ -53,11 +53,6 @@ This project implements the following summarized requirements:
       ```bash
       ./gradlew build
       ```
-    - Using Maven:
-      ```bash
-      mvn clean install
-      ```
-
 3. **Run Unit Tests**:
     - Using Gradle:
       ```bash
