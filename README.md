@@ -206,5 +206,5 @@ Test reports are available inside each module on:
 ```
 rest/build/reports/tests/test/index.html
 calculator/build/reports/tests/test/index.html
-``
+```
 
