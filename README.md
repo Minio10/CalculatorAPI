@@ -130,7 +130,7 @@ Response:
 ## Error Handling
 - **Invalid Input**:
   ```bash
-  GET /divide?a=5&b=0
+  GET /division?a=5&b=0
   Response:
   {
     "error": "Division by zero is not allowed."
