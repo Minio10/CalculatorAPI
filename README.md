@@ -44,8 +44,7 @@ This project implements the following summarized requirements:
 ## Build Instructions
 1. **Clone the Repository**:
    ```bash
-   git clone <repository_url>
-   cd <project_directory>
+   git clone https://github.com/Minio10/CalculatorAPI
    ```
 
 2. **Build the Project**:
